@@ -12,7 +12,7 @@ export default async function Header() {
                 <Link className='font-bold' href={"/"} prefetch={false}>
                     FOOFEST
                 </Link>
-            </li>
+            </li> 
         </ul>
 
         <ul className='flex items-center gap-10'>
