@@ -2,8 +2,8 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation';
 import CampingTickets from "@/app/components/Tickets/CampingTickets";
-import RemoveButton from '@/app/components/RemoveButton';
-import AddButton from '@/app/components/AddButton';
+import RemoveTentButton from '@/app/components/tentbuttons/RemoveTent';
+import AddTentButton from '@/app/components/tentbuttons/AddTent';
 
 
 export default function Home() {
@@ -12,6 +12,8 @@ export default function Home() {
   const vip = searchParams.get('ticketcount2')
 
   // + laver det om til et tal fremfor en string
+  // const [tentCount, setTentCount] = useState();
+  // const [VipTentCount, setTentCount] = useState();
   const [ticketCount1, setTicketCount1] = useState(+regular);
   const [ticketCount2, setTicketCount2] = useState(+vip);
 
@@ -79,12 +81,12 @@ export default function Home() {
                 <p>799 DKK</p>
               </div>
               <div className='flex flex-row gap-3 h-6 items-center mt-4'>
-                <RemoveButton onRemoveButtonClick={handleRemoveTicket} /> 
+                <RemoveTentButton onRemoveButtonClick={handleRemoveTicket} /> 
                 <input 
                 name="ticketcount1" 
                 className='border-solid border-2 border-Lightpink rounded-full w-32 bg-White p-2' 
                 value={ticketCount1} />
-                <AddButton onButtonClick={() => handleTicketChange(ticketCount1 + 1)} />
+                <AddTentButton onButtonClick={() => handleTicketChange(ticketCount1 + 1)} />
               </div>
             </div>
 
@@ -96,12 +98,12 @@ export default function Home() {
               </div>
 
               <div className='flex flex-row gap-3 h-6 items-center mt-4'>
-                <RemoveButton onRemoveButtonClick={handleRemoveTicket2} /> 
+                <RemoveTentButton onRemoveButtonClick={handleRemoveTicket2} /> 
                 <input 
                 name="ticketcount2" 
                 className='border-solid border-2 border-Lightpink rounded-full w-32 bg-White p-2' 
                 value={ticketCount2} />
-                <AddButton onButtonClick={() => handleTicketChange2(ticketCount2 + 1)} />
+                <AddTentButton onButtonClick={() => handleTicketChange2(ticketCount2 + 1)} />
               </div>
             </div>
             <br />

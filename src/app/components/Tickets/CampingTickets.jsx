@@ -16,18 +16,20 @@ export default function Ticket(props) {
     <h2 className='text-White text-2xl font-bold'>ITEMS</h2>
     
     <h2>{ticketCount} FOO TICKETS {totalPrice}</h2>
+    
+    <TentTicketCalculator 
+    tentAmount1={props.tentCount1} 
+    handleTentChange={props.handleTentChange1} 
+    handleRemoveTent={props.handleRemoveTent1} 
+    tentPrice1={799}/>  
 
     <TentTicketCalculator 
-    ticketAmount2={props.ticketCount2} 
-    handleTicketChange={props.handleTicketChange2} 
-    handleRemoveTicket={props.handleRemoveTicket2} 
-    ticketPrice2={1299}/>
+    tentAmount2={props.tentCount2} 
+    handleTentChange={props.handleTentChange2} 
+    handleRemoveTent={props.handleRemoveTent2} 
+    tentPrice2={1299}/>
 
-    <TentTicketCalculator 
-    ticketAmount1={props.ticketCount1} 
-    handleTicketChange={props.handleTicketChange1} 
-    handleRemoveTicket={props.handleRemoveTicket1} 
-    ticketPrice1={799}/>  
+    
 
     <h2>Camping Area</h2>
     <p>{}</p>

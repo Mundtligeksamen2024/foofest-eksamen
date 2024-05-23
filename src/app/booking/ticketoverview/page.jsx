@@ -1,6 +1,5 @@
 "use client"
 import { useState } from 'react'
-import priser from '@/js/settings';
 
 import Ticket from "@/app/components/Tickets/Ticket";
 import RemoveButton from '@/app/components/RemoveButton';
@@ -49,10 +48,7 @@ export default function Home() {
               </div>
               <div className='flex flex-row gap-3 h-6 items-center mt-4'>
                 <RemoveButton onRemoveButtonClick={handleRemoveTicket} /> 
-                <input 
-                name="ticketcount1" 
-                className='border-solid border-2 border-Lightpink rounded-full w-32 bg-White p-2' 
-                value={ticketcount1} />
+                <input name="ticketcount1" className='border-solid border-2 border-Lightpink rounded-full w-32 bg-White p-2' value={ticketcount1} />
                 <AddButton onButtonClick={() => handleTicketChange(ticketcount1 + 1)} />
               </div>
             </div>
