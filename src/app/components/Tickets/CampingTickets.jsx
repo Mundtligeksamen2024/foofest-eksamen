@@ -1,9 +1,13 @@
+// import { useSearchParams } from 'next/navigation';
 import TwoTentParent from '@/app/ParentComponent/TwoTentParent';
 import ChooseTicket from '../ChooseTicket';  
 import ThreeTentParent from '@/app/ParentComponent/ThreeTentParent';
 
 
 export default function TentTicket(props) {
+  // const searchParams = useSearchParams()
+  // const regular = searchParams.get('ticketcount1')
+  // const vip = searchParams.get('ticketcount2')
 
 
   //Tent
@@ -12,18 +16,12 @@ export default function TentTicket(props) {
   const bookingFee = totalTentCount > 0 ? 99 : 0;
   const totalTentPrice = totalTentCount + bookingFee;
 
-  //Ticket den forrige side
-  const ticketCount = props.ticketcount2 + props.ticketcount1;
-  const TotalTicketCount = props.ticketcount1 * 799 + props.ticketcount2 * 1299;
-  const totalPrice = TotalTicketCount + bookingFee;
-
-
 
   return (
     <div className='grid gap-4 border-solid border-Hotpink border-2 rounded-3xl p-8 text-White w-64'>
     <h2 className='text-White text-2xl font-bold'>ITEMS</h2>
     
-    <h2>{ticketCount} TICKETS {totalPrice}</h2>
+    <h2>{} TICKETS {}</h2>
 
     <TwoTentParent 
     tentTicketCount={props.tentTicket} 

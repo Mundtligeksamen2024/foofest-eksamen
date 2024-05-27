@@ -1,19 +1,17 @@
 "use client"
 import { useState } from 'react'
-// import { useSearchParams } from 'next/navigation';
 import CampingTickets from "@/app/components/Tickets/CampingTickets";
 import RemoveTent from '@/app/components//Buttons/Removetent';
 import AddTent from '@/app/components//Buttons/AddTent';
 
 
 export default function Home() {
-  // const searchParams = useSearchParams()
-  // const regular = searchParams.get('ticketcount1')
-  // const vip = searchParams.get('ticketcount2')
+
 
   // + laver det om til et tal fremfor en string
   const [twoTentTicket, setTwoTentTicket] = useState(0);
   const [threeTentTicket, setThreeTentTicket] = useState(0);
+
 
   const handleAddTent = (count) => {
     setTwoTentTicket(count);  
