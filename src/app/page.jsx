@@ -9,11 +9,17 @@ import ForsideQnA from "./components/ForsideQnA";
 import Nyhedsbrev from "./components/Nyhedsbrev";
 
 
+
 const BowlbyOne = Bowlby_One({
   subsets: ["latin"],
   weight: "400",
   display: "swap",
 });
+
+export const metadata = {
+  title: "Foo Fest | Home",
+  Description: "Discover FOO Festival 2024: Your ultimate destination for electrifying music and unforgettable experiences.",
+};
 
 
 export default function Home() {

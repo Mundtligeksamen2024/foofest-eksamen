@@ -10,6 +10,11 @@ const BowlbyOne = Bowlby_One({
   display: "swap",
 });
 
+export const metadata = {
+  title: "Foo Fest | Schedule",
+  Description: "Check out the complete schedule for FOO Festival 2024 and plan your ultimate festival experience!",
+};
+
 async function SchedulePage() {
   // Merger to links sammen. Bands og schedule
   const bands = await fetch(

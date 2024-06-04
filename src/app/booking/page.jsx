@@ -12,6 +12,11 @@ const BowlbyOne = Bowlby_One({
   display: "swap",
 });
 
+export const metadata = {
+  title: "Foo Fest | Buy Tickets",
+  Description: "Discover FOO Festival 2024: Your ultimate destination for electrifying music and unforgettable experiences.",
+};
+
 
 export default function page() {
   return (

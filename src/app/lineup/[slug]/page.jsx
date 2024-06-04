@@ -8,6 +8,11 @@ const BowlbyOne = Bowlby_One({
   display: "swap",
 });
 
+export const metadata = {
+  title: "Foo Fest | Artists",
+  Description: "Explore the FOO Festival 2024 lineup and discover the top techno artists set to perform",
+};
+
 export async function generateStaticParams() {
   const res = await fetch("https://yielding-cooperative-tarsal.glitch.me/bands/");
   const pages = await res.json();
