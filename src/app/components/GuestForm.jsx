@@ -58,7 +58,8 @@ export default function GuestForm() {
       country: event.target.country.value,
       postalcode: event.target.postalcode.value,
       city: event.target.city.value,
-      phonenumber: event.target.phonenumber.value
+      phonenumber: event.target.phonenumber.value,
+      terms: event.target.terms.value,
     };
 
     //Hvis det lykkedes at sende dataen, så vis 'Form submitted successfully!' og send kunden over på næste side i booking flowet
@@ -193,6 +194,17 @@ export default function GuestForm() {
               name="phonenumber"
             />
           </label>
+        </div>
+
+        <div className='mt-5'>
+        <label className='flex gap-2'>
+          <input 
+          className='w-5 h-5' 
+          type="checkbox" 
+          name='check' 
+          required /> 
+          Accept terms and conditions
+        </label> 
         </div>
 
         <div>
