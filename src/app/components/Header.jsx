@@ -15,7 +15,7 @@ export default async function Header() {
     <>
       <div className="bg-Hotpink py-2">
         <p className="text-xs sm:text-sm 2xl:text-xl text-White text-center font-medium tracking-wider">
-          Camping Spots Still Available - Reserve Yours Today!
+          Camping Spots Still Available - Reserve Yours Today!!
         </p>
       </div>
 
