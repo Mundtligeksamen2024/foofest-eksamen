@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 
-body{
+/* body{
   background: #00071E;
   background: linear-gradient(0deg, #3000B9 25%, #00071E 100%);   
+  height: fit-content;
+} */
+
+body{
+  background: #00071E;
   height: fit-content;
 }
