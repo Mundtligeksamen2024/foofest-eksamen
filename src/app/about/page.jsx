@@ -109,7 +109,7 @@ function AboutFooFest() {
     </div>
 
     <div>
-    <h2 className='text-2xl xl:text-4xl mb-5'>Hight Lights</h2>
+    <h2 className='text-2xl'>Hight Lights</h2>
     <li>Top DJs and Artists: Dance to the beats of world-renowned techno artists and discover emerging talents.</li>
     <li>Immersive Art Installations: Explore captivating art pieces and interactive installations scattered throughout the festival grounds.</li>
     <li>Gourmet Food and Drinks: Enjoy a wide variety of food options, from local favorites to international cuisine, along with craft cocktails and beverages.</li>
