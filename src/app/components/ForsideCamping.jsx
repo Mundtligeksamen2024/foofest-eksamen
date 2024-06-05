@@ -15,7 +15,7 @@ function ForsideCamping() {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-9  text-White">
 
-          <div className="bg-Navyblue rounded-xl hover:bg-Hotpink transition duration-300 border-2 border-Hotpink ">
+          <div className=" rounded-xl transition duration-300 border-2 border-Hotpink ">
             <img src="/card5.webp" alt="dummy" className="w-full h-48 object-cover rounded-xl" />
             <div className="p-5">
               <h3 className="text-2xl font-bold mb-4 text-White uppercase">Friday and Saturday are sold out!</h3>
@@ -23,7 +23,7 @@ function ForsideCamping() {
             </div>
           </div>
 
-          <div className="bg-Navyblue rounded-xl  hover:bg-Hotpink transition duration-300 border-2 border-Hotpink">
+          <div className=" rounded-xl transition duration-300 border-2 border-Hotpink">
             <img src="/card2.webp" alt="dummy" className="w-full h-48 object-cover rounded-xl" />
             <div className="p-5">
               <h3 className="text-2xl font-bold mb-4 text-White uppercase">Get guided through the music</h3>
@@ -31,7 +31,7 @@ function ForsideCamping() {
             </div>
           </div>
 
-          <div className="bg-Navyblue rounded-xl  hover:bg-Hotpink transition duration-300 border-2 border-Hotpink">
+          <div className=" rounded-xl transition duration-300 border-2 border-Hotpink">
             <img src="/card3.webp" alt="dummy" className="w-full h-48 object-cover rounded-xl" />
             <div className="p-5">
               <h3 className="text-2xl font-bold mb-4 text-White uppercase">The schedule is ready!</h3>

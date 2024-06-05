@@ -31,7 +31,7 @@ const CardPayment = () => {
     setState((prev) => ({ ...prev, focus: evt.target.name }));
   }
   return (
-    <div className='p-6 m-12 rounded-3xl border-2 border-Hotpink bg-Darkblue max-w-5xl mx-auto'>
+    <div className='p-6 m-12 rounded-3xl border-2 border-Hotpink xl:mt-28 max-w-5xl mx-auto'>
       <h1 className={`text-2xl text-center text-White md:text-4xl mt-2 mb-8 ${BowlbyOne.className}`}>PAYMENT DETAILS</h1>
       <div className='md:grid grid-cols-2 justify-center items-center'>
         <section>

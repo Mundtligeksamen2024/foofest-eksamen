@@ -24,7 +24,7 @@ export default function TentTicket(props) {
 
 
   return (
-    <div className='grid gap-4 border-solid border-Hotpink border-2 rounded-3xl p-8 text-White w-72 xl:w-96'>
+    <div className='grid gap-4 border-solid border-Hotpink border-2 p-8 text-White w-72 xl:w-96'>
     <h2 className='text-White text-4xl font-bold mb-5'>ITEMS</h2>
     
     <div className='flex gap-2 text-xl'>

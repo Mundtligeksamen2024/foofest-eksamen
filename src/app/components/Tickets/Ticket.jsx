@@ -10,7 +10,7 @@ export default function Ticket(props) {
 
 
   return (
-    <div className='grid gap-4 border-solid border-Hotpink border-2 rounded-3xl p-8 text-White w-72'>
+    <div className='grid gap-4 border-solid border-Hotpink border-2 p-8 text-White w-72'>
     <h2 className='text-White text-4xl font-bold'>ITEMS</h2> 
     
     <ParentComponent 

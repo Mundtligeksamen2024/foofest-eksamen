@@ -59,7 +59,7 @@ export default function GuestForm() {
       postalcode: event.target.postalcode.value,
       city: event.target.city.value,
       phonenumber: event.target.phonenumber.value,
-      terms: event.target.terms.value,
+      // terms: event.target.terms.value,
     };
 
     //Hvis det lykkedes at sende dataen, så vis 'Form submitted successfully!' og send kunden over på næste side i booking flowet
@@ -196,7 +196,7 @@ export default function GuestForm() {
           </label>
         </div>
 
-        <div className='mt-5'>
+        {/* <div className='mt-5'>
         <label className='flex gap-2'>
           <input 
           className='w-5 h-5' 
@@ -205,7 +205,7 @@ export default function GuestForm() {
           required /> 
           Accept terms and conditions
         </label> 
-        </div>
+        </div> */}
 
         <div>
           <button

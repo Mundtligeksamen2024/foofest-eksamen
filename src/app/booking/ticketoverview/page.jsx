@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
     <form action='/booking/campingArea'>
-    <div className="sm:w-11/12 border-solid bg-Darkblue border-Hotpink border-2 rounded-3xl p-8 lg:w-7/12 m-auto mt-10">
+    <div className="sm:w-11/12 border-solid  border-Hotpink border-2 p-8 lg:w-7/12 m-auto mt-28">
       <h1 className={` ${BowlbyOne.className} text-White text-2xl lg:text-4xl mb-5`}>TICKETS</h1>
         <div className="grid md:flex md:p-8 gap-28">
     

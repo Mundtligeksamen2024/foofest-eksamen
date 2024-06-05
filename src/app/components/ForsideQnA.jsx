@@ -11,7 +11,7 @@ function ForsideQnA() {
   return (
     <div className='p-4'>
           <div className="max-w-3xl mx-auto mb-28">
-        <h2 className={`text-White text-4xl md:text-5xl mb-12 text-center ${BowlbyOne.className}`}>Q&A</h2>
+        <h2 className={`text-White text-4xl md:text-5xl mb-12 text-center ${BowlbyOne.className}`}>FAQ</h2>
         <details className="border-b-2 mb-6 border-Hotpink">
           <summary style={{ color: 'Hotpink' }}>
             <span className="text-2xl md:text-3xl font-semibold text-White">How can I apply to become a volunteer?</span>

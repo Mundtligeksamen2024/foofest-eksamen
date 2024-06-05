@@ -25,7 +25,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-    
+
       <LpBanner />
       <div id="artistPoster"></div>
       <ArtistPoster />
@@ -39,8 +39,10 @@ export default function Home() {
         </div>
       </div>
 
+      
       <ForsideQnA/>
       <Nyhedsbrev/>
+      
 
     </>
   );
