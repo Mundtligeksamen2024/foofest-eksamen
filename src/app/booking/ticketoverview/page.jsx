@@ -5,6 +5,7 @@ import Ticket from "@/app/components/Tickets/Ticket";
 import RemoveTicket from '@/app/components/RemoveTicket';
 import AddButton from '@/app/components/AddButton';
 import ChooseTicket from '@/app/components/ChooseTicket';
+import Sti from '@/app/components/Sti/page';
 
 
 const BowlbyOne = Bowlby_One({
@@ -42,6 +43,15 @@ export default function Home() {
   return (
     <>
     <form action='/booking/campingArea'>
+    
+    <div className='flex justify-center mt-28 -mb-16 text-White'>
+    <Sti>
+      <Sti.Item>sample</Sti.Item>
+    </Sti>
+    </div>
+
+
+
     <div className="sm:w-11/12 border-solid  border-Hotpink border-2 p-8 lg:w-7/12 m-auto mt-28">
       <h1 className={` ${BowlbyOne.className} text-White text-2xl lg:text-4xl mb-5`}>TICKETS</h1>
         <div className="grid md:flex md:p-8 gap-28">
