@@ -84,7 +84,7 @@ export default function LineUp() {
           {filteredBands.map((band) => (
             <div key={band.name} className="flex flex-col">
               <Link href={`/lineup/${band.slug}`} prefetch={false}>
-                <div className="border-2 border-Hotpink rounded-lg cursor-pointer bg-Darkblue hover:scale-105 transition-transform duration-150 hover:bg-Navyblue">
+                <div className="border-2 border-Hotpink rounded-lg cursor-pointer hover:scale-105 transition-transform duration-150">
                   <div className="w-full h-40 sm:h-72 md:h-80 relative">
                     <Image
                       alt="Artist presentation"

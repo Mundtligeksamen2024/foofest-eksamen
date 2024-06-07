@@ -19,7 +19,7 @@ function ActCard({ name, genre, start, end, src, slug, day, scene }) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="rounded-xl mb-8 border-2 border-Hotpink hover:scale-105 bg-Darkblue hover:bg-Navyblue"
+      className="rounded-xl mb-8 border-2 border-Hotpink hover:scale-105"
     >
 
         <Link href={`/lineup/${slug}`} prefetch={false}>

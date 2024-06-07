@@ -14,7 +14,21 @@ export default async function Header() {
 
   return (
     <>
-      <nav className="fixed w-full justify-center gap-2 sm:gap-10 md:gap-10 xl:gap-20 bg-Black top-0 z-50 flex text-White px-2 py-4 2xl:py-5 items-center md:px-10">
+      <nav className="fixed w-full justify-between gap-2 sm:gap-10 md:gap-10 xl:gap-20 bg-Black top-0 z-50 flex text-White px-2 py-4 2xl:py-5 items-center md:px-10">
+        
+      <ul className="flex gap-2">
+          <li className='grid'>
+            <Link
+              className={`font-bold text-sm sm:text-2xl xl:text-2xl ${BowlbyOne.className} hover:text-Hotpink`}
+              href="/"
+              prefetch={false}
+            >
+              FOOFEST 
+            </Link>
+            <p className='text-base'>July 3rd - July 10th 2024</p>
+          </li>
+        </ul>
+        
         <ul className='flex gap-2 xl:gap-5'>
         <li>
             <Link
@@ -34,24 +48,7 @@ export default async function Header() {
               SCHEDULE
             </Link>
           </li>
-          </ul>
 
-
-        <ul className="flex gap-2">
-          <li>
-            <Link
-              className={`font-bold text-sm sm:text-2xl xl:text-2xl ${BowlbyOne.className} hover:text-Hotpink`}
-              href="/"
-              prefetch={false}
-            >
-              FOOFEST
-            </Link>
-          </li>
-        </ul>
-
-
-
-        <ul className="flex items-center gap-4 md:gap-10">
           <li>
             <Link
               href="/booking"
