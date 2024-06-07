@@ -7,12 +7,13 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'Hotpink': '#D500C0',
+      'Hotpink': 'rgb(255 0 248)',
       'Lightpink': '#FF68E4',
       'White': '#FFF',
       'Navyblue': '#29029F',
       'Darkblue': '#020067',
       'Black': '#000000b5',
+      'Neon': '#39ff14 ',
     },
 
     extend: {
