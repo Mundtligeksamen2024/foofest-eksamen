@@ -11,7 +11,7 @@ const BowlbyOne = Bowlby_One({
 
 function LpBanner() {
   return (
-    <div className="bg-[url('/LPBANNERIMAGE.webp')] bg-cover bg-center p-12 brightness-75">
+    <div className="bg-[url('/techno.jpg')] bg-cover bg-center p-12 brightness-75">
       <div className="h-screen flex justify-center items-center">
         <div className="text-center -mt-24 md:mt-0">
         
