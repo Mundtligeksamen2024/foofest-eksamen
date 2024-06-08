@@ -131,8 +131,8 @@ export default function Header() {
         </div>
  
         {/* burger menu elementer */}
- 
-        <ul className="flex flex-col items-center h-full space-y-12 overflow-y-auto bg-Black pt-32">
+        <>
+        <ul className='flex flex-col items-center h-full space-y-12 overflow-y-auto bg-Black pt-32'>
           <li>
             <Link
               href="/booking"
@@ -167,6 +167,7 @@ export default function Header() {
             <RotateBanner />
           </div>
         </ul>
+        </>
  
       </div>
     </>
