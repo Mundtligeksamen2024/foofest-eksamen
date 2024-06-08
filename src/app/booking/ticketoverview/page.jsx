@@ -6,7 +6,6 @@ import RemoveTicket from '@/app/components/RemoveTicket';
 import AddButton from '@/app/components/AddButton';
 import ChooseTicket from '@/app/components/ChooseTicket';
 
-
 const BowlbyOne = Bowlby_One({
   subsets: ["latin"],
   weight: "400",
@@ -37,6 +36,8 @@ export default function Home() {
       setTicketcount2(prevCount => prevCount - 1);
     }
   };
+
+
   
 
   return (

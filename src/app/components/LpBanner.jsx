@@ -11,13 +11,13 @@ const BowlbyOne = Bowlby_One({
 
 function LpBanner() {
   return (
-    <div className="bg-[url('/LPBANNERIMAGE.webp')] bg-cover bg-center ">
+    <div className="bg-[url('/LPBANNERImage.webp')] bg-cover bg-center">
       <div className="h-screen flex justify-center items-center">
-        <div className="text-center -mt-24 md:mt-0">
+        <div className="text-start xl:text-center -mt-24 md:mt-0">
         
-          <h1 className={` text-White text-7xl md:text-8xl ${BowlbyOne.className}`}>FOO FESTIVAL</h1>
+          <h1 className={`text-White text-7xl md:text-9xl ${BowlbyOne.className}`}>FOO FESTIVAL</h1>
           <div className="flex justify-center gap-5 text-White text-2xl md:text-xl">
-            <p className='text-4xl'>Copenhagen biggest techno festival in 2024</p>
+            <p className='text-5xl font-bold'>Copenhagen's biggest techno festival in 2024</p>
           </div>
 
           <Link href="#artistPoster">

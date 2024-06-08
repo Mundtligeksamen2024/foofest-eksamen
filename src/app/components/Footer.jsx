@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bowlby_One } from "next/font/google";
 import Link from 'next/link';
+import Nyhedsbrev from './Nyhedsbrev';
 
 const BowlbyOne = Bowlby_One({
   subsets: ["latin"],
@@ -11,6 +12,10 @@ const BowlbyOne = Bowlby_One({
 export default function Footer() {
   return (
     <section className='p-5 md:p-10 bg-Black'>
+
+      <div>
+      <Nyhedsbrev/>
+      </div>
       <div className='max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8  text-center md:text-left'>
         
         <div className='order-2 md:order-1'>
