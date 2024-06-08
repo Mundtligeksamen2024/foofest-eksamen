@@ -69,7 +69,7 @@ export default function Home() {
           <div className=''> 
             <h2 className='text-White sm:text-base xl:text-2xl font-bold mb-5'>CHOOSE YOUR CAMPING AREA</h2>
             <div className='grid xl:grid-cols-2 text-White'>
-            <label className='hover:text-Hotpink text-xl mt-2'><input className='w-5 h-5' defaultValue="Svartheim" onChange={handleCampingArea} type="radio" name='area'  /> Svartheim</label>
+            <label className='hover:text-Hotpink text-xl mt-2'><input className='w-5 h-5' defaultValue="Svartheim" onChange={handleCampingArea} type="radio" name='area' /> Svartheim</label>
             <label className='hover:text-Hotpink text-xl mt-2'><input className='w-5 h-5' defaultValue="Nilfheim" onChange={handleCampingArea} type="radio" name='area' /> Nilfheim</label>
             <label className='hover:text-Hotpink text-xl mt-2'><input className='w-5 h-5' defaultValue="Helheim" onChange={handleCampingArea} type="radio" name='area' /> Helheim</label>
             <label className='hover:text-Hotpink text-xl mt-2'><input className='w-5 h-5' defaultValue="Muspelheim" onChange={handleCampingArea} type="radio" name='area' /> Muspelheim</label>

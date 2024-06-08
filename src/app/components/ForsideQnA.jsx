@@ -36,12 +36,7 @@ function ForsideQnA() {
 
           </summary>
           <p className="text-White mt-5 mb-5 max-w-2xl text-lg">When it comes to camping at FOO Festival, weve got you covered with a variety of options tailored to suit your preferences. Dive into the heart of the festival action at Svartheim, where vibrant energy and excitement abound. For those seeking tranquility, Nilfheim offers a serene escape from the festival buzz. Helheim strikes the perfect balance between proximity to the festivities and a peaceful retreat. Join the lively community of festival-goers at Muspelheim, where the atmosphere is electric. And for nature lovers, Alfheim provides a picturesque camping experience amidst lush greenery. Whatever your camping style, FOO Festival has the perfect spot for you to relax and recharge between performances.
-
-
-
-
-
-</p>
+          </p>
         </details>
       </div>
     </div>
