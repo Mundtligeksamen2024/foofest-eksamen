@@ -17,7 +17,7 @@ function LpBanner() {
         
           <h1 className={`text-White text-7xl md:text-9xl ${BowlbyOne.className}`}>FOO FESTIVAL</h1>
           <div className="flex justify-center gap-5 text-White text-2xl md:text-xl">
-            <p className='text-5xl font-bold'>Copenhagen's biggest techno festival in 2024</p>
+            <p className='text-5xl font-bold'>Copenhagens biggest techno festival in 2024</p>
           </div>
 
           <Link href="#artistPoster">
