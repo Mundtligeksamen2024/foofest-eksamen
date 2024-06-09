@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <>
     <form action='/booking/campingArea'>
-    <div className="sm:w-11/12 border-solid  border-Hotpink border-2 p-8 lg:w-7/12 m-auto mt-28">
+    <div className="sm:w-11/12 border-solid  border-Hotpink border-2 p-8 lg:w-7/12 m-auto mt-28 xl:mb-28">
       <h1 className={` ${BowlbyOne.className} text-White text-2xl lg:text-4xl mb-5`}>TICKETS</h1>
         <div className="grid md:flex md:p-8 gap-28">
     
@@ -57,7 +57,7 @@ export default function Home() {
               <div className='flex flex-row gap-3 h-6 items-center mt-4'>
                 <RemoveTicket onRemoveButtonClick={handleRemoveTicket} /> 
                 <input 
-                name="ticketcount1" 
+                name="ticketcount1"
                 className='border-solid border-2 border-Lightpink rounded-full w-32 bg-White p-2' 
                 value={ticketcount1} />
                 <AddButton onButtonClick={() => handleTicketChange(ticketcount1 + 1)} />

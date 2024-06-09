@@ -19,36 +19,35 @@ function ActCard({ name, genre, start, end, src, slug, day, scene }) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="rounded-xl mb-8 border-2 border-Hotpink hover:scale-105"
+      className="mb-8 border-2 border-Hotpink hover:scale-105"
     >
 
         <Link href={`/lineup/${slug}`} prefetch={false}>
-        <section className=" grid grid-cols-3 gap-4 sm:gap-24">
+        <section className="grid grid-cols-3 gap-4 sm:gap-24 bg-Black">
         <div className="text-center flex flex-col justify-center items-center">
-            <p className="text-md md:text-3xl font-semibold text-White ">
+
+          {/* Time */}
+            <p className="text-md md:text-lg font-semibold text-White ">
               {start} - {end}
             </p>
           </div>
 
+          {/* Bands name */}
           <div className="flex flex-col justify-center items-center">
-            <p className="pl-4 text-md md:text-3xl  text-White text-center font-bold uppercase">{name}</p>
+            <p className="pl-4 text-md md:text-lg  text-White text-center font-bold uppercase">{name}</p>
           </div>
 
-    
-
-            <div className="relative h-24 md:h-44">
+          {/* image */}
+            <div className="relative h-24 md:h-28">
             <Image
               alt="Artist presentation"
               src={src.startsWith("http") ? src : `https://yielding-cooperative-tarsal.glitch.me/logos/${src}`}
               layout="fill"
               objectFit="cover"
               className="rounded-xl"
-      
-
             />
             </div>
           </section>
-
         </Link>
     </motion.article>
   );

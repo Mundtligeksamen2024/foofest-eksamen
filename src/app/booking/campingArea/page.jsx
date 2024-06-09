@@ -62,7 +62,7 @@ export default function Home() {
       <input type="hidden" name="ticketcount1" value={regular}/>
       <input type="hidden" name="ticketcount2" value={vip}/>
 
-    <div className="w-11/12 p-3 border-solid border-Hotpink border-2 xl:px-20 xl:py-8 lg:w-9/12 m-auto mt-28">
+    <div className="w-11/12 p-3 border-solid border-Hotpink border-2 xl:px-20 xl:py-8 lg:w-9/12 m-auto mt-28 xl:mb-28">
       <h1 className={`text-White text-2xl mb-10 md:mb-0 lg:text-4xl ${BowlbyOne.className}`}>CAMPING AREA</h1>
         <div className="grid gap-10 xl:flex xl:justify-between xl:py-8">
 

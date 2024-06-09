@@ -57,16 +57,15 @@ export default function LineUp() {
   const sortedGenres = Object.keys(groupedByGenre).sort((a, b) => a.localeCompare(b));
 
   return (
-    <section>
-
+    <section className='p-10'>
       {/* Dropdown for valg af genre */}
-      <div className="flex justify-center items-center h-full">
-        <div className="m-4">
-          <label htmlFor="genre" className="text-Hotpink text-xl sm:text-3xl mb-3 mr-4 font-semibold">Choose a genre:</label>
+      <div className="flex items-center h-full xl:mb-10">
+        <div className="">
+          <label htmlFor="genre" className="text-White text-xl sm:text-5xl mb-3 font-semibold">Choose a genre:</label>
           <select
             id="genre"
             name="genre"
-            className="rounded-full px-2 md:px-6 py-2 border-2 border-Hotpink"
+            className="px-2 md:px-6 py-2 bg-Black text-White xl:text-4xl"
             onChange={handleGenreChange}
             value={selectedGenre}
           >
@@ -78,34 +77,67 @@ export default function LineUp() {
         </div>
       </div>
 
-      {/* Bands opdelt efter genre */}
-      {filteredBands.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-12 justify-center max-w-6xl mx-auto p-4 sm:p-12">
-          {filteredBands.map((band) => (
-            <div key={band.name} className="flex flex-col">
-              <Link href={`/lineup/${band.slug}`} prefetch={false}>
-                <div className="border-2 border-Hotpink rounded-lg cursor-pointer hover:scale-105 transition-transform duration-150 ">
-                  <div className="w-full h-40 sm:h-72 md:h-80 relative">
-                    <Image
-                      alt="Artist presentation"
-                      src={band.logo.startsWith("http") ? band.logo : `https://yielding-cooperative-tarsal.glitch.me/logos/${band.logo}`}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-t-lg"
-                    />
+      {/* Bands for the selected genre */}
+      {selectedGenre !== 'All' && filteredBands.length > 0 && (
+        <div className="mb-10">
+
+          <h2 className="text-White text-2xl sm:text-4xl xl:text-4xl font-semibold mb-4">{selectedGenre}</h2>
+
+          <div className="grid snap-start grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 justify-start max-w-full p-4 sm:p-12">
+            {filteredBands.map((band) => (
+              <div key={band.name} className="flex flex-col">
+                <Link href={`/lineup/${band.slug}`} prefetch={false}>
+                  <div className="border-2 border-Hotpink rounded-lg cursor-pointer hover:scale-105 transition-transform duration-150">
+                    <div className="w-full h-40 sm:h-72 md:h-40 relative">
+                      <Image
+                        alt="Artist presentation"
+                        src={band.logo.startsWith("http") ? band.logo : `https://yielding-cooperative-tarsal.glitch.me/logos/${band.logo}`}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-t-lg"
+                      />
+                    </div>
+                    <div className="p-2 sm:p-4">
+                      <p className="text-Hotpink mt-2 sm:mt-5 text-md sm:text-2xl font-semibold">{band.genre}</p>
+                      <p className="text-White text-lg sm:text-3xl font-bold uppercase mb-1 sm:mb-2">{band.name}</p>
+                    </div>
                   </div>
-                  <div className="p-2 sm:p-4">
-                    <p className="text-Hotpink mt-2 sm:mt-5 text-md sm:text-2xl font-semibold">{band.genre}</p>
-                    <p className="text-White text-lg sm:text-3xl font-bold uppercase mb-1 sm:mb-2">{band.name}</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
-      ) : (
-        <p className="text-White">No bands found for the selected genre.</p>
       )}
+
+      {/* Bands grouped by all genres */}
+      {sortedGenres.map((genre) => (
+        <div key={genre} className="mb-10">
+          <h2 className="text-White text-2xl sm:text-4xl font-semibold mb-4">{genre}</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 justify-start max-w-full p-4 sm:p-12">
+            {groupedByGenre[genre].map((band) => (
+              <div key={band.name} className="flex flex-col">
+                <Link href={`/lineup/${band.slug}`} prefetch={false}>
+                  <div className="border-2 border-Hotpink rounded-lg cursor-pointer hover:scale-105 transition-transform duration-150 ">
+                    <div className="w-full h-40 sm:h-72 md:h-80 relative">
+                      <Image
+                        alt="Artist presentation"
+                        src={band.logo.startsWith("http") ? band.logo : `https://yielding-cooperative-tarsal.glitch.me/logos/${band.logo}`}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-t-lg"
+                      />
+                    </div>
+                    <div className="p-2 sm:p-4">
+                      <p className="text-Hotpink mt-2 sm:mt-5 text-md sm:text-2xl font-semibold">{band.genre}</p>
+                      <p className="text-White text-lg sm:text-3xl font-bold uppercase mb-1 sm:mb-2">{band.name}</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </section>
   );
 }

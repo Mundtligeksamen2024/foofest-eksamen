@@ -17,9 +17,7 @@ function page() {
     <div>
       <LineupBanner/>
       <h1 className={`text-White text-5xl -mt-5 text-center mb-8 md:text-8xl md:-mt-20 md:p-7 ${BowlbyOne.className}`}>LINE UP</h1>
-
       <Artistcard />
-      
     </div>
   )
 }

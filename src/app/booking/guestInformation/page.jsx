@@ -13,7 +13,7 @@ const BowlbyOne = Bowlby_One({
 export default function Formpage() {
   return (
     <main>
-      <div className="text-White p-4 sm:p-6 md:p-12 lg:px-16 m-4 sm:m-4 md:m-12 lg:mx-44 border-2 xl:mt-24 border-Hotpink">
+      <div className="text-White p-4 sm:p-6 md:p-12 lg:px-16 m-4 sm:m-4 md:m-12 lg:mx-44 border-2 xl:mt-24 xl:mb-28 border-Hotpink">
         <h1 className={`text-White text-3xl md:text-4xl mb-4 sm:mb-6 md:mb-8  ${BowlbyOne.className}`}>
           INFORMATION
         </h1>

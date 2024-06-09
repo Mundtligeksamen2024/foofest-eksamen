@@ -50,11 +50,8 @@ async function SchedulePage() {
         <div>
           <ScheduleBanner />
           <h1 className={`text-White text-5xl -mt-5 text-center mb-8 md:text-8xl md:-mt-20 md:p-7 ${BowlbyOne.className}`}>SCHEDULE</h1>
-
-
           <Schedule newArray={merged} days={days}/>
         </div>
-
       </main>
     </>
   );
