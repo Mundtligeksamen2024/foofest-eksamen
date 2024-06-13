@@ -19,9 +19,7 @@ export default function VipTicket() {
       
       
       {/* Children */}
-      <h3 className='text-xl text-start'>From 1299 DKK</h3>
-      
-      <BuyTicket />
+      <h3 className='text-xl text-start'>From 1299 DKK <br /><span className='text-sm'>Pr Person</span></h3>
       </div>
   );
 }

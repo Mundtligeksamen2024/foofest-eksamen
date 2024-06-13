@@ -1,5 +1,5 @@
 "use client"
-import TicketCal from '../components/TicketCal';
+import TicketCal from '../components/Calculator/TicketCal';
 
 
 const ParentComponent = ({ticketCount, ticketPrice}) => {

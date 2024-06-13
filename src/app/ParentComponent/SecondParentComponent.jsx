@@ -1,5 +1,5 @@
 "use client"
-import VipTicketCal from '../components/VipTicketCal';
+import VipTicketCal from '../components/Calculator/VipTicketCal';
 
 
 const ParentComponent = ({ticketCount, ticketPrice}) => {

@@ -1,11 +1,24 @@
 "use client"
+
 import { useState } from 'react'
 import { Bowlby_One } from "next/font/google";
+import { useRouter } from 'next/navigation';
+import { Breadcrumb } from 'antd';
+
 import Ticket from "@/app/components/Tickets/Ticket";
 import RemoveTicket from '@/app/components/RemoveTicket';
 import AddButton from '@/app/components/AddButton';
 import ChooseTicket from '@/app/components/ChooseTicket';
 
+
+// breadcrunb path
+const items = [
+  { label: 'Home', path: '/' },
+  { label: 'Tickets', path: '/booking/ticketoverview' }
+];
+
+
+// font setup
 const BowlbyOne = Bowlby_One({
   subsets: ["latin"],
   weight: "400",
@@ -37,11 +50,13 @@ export default function Home() {
     }
   };
 
-
+  const router = useRouter();
   
-
   return (
     <>
+      <div >
+        <Breadcrumb items={items} className='' />
+      </div>
     <form action='/booking/campingArea'>
     <div className="sm:w-11/12 border-solid  border-Hotpink border-2 p-8 lg:w-7/12 m-auto mt-28 xl:mb-28">
       <h1 className={` ${BowlbyOne.className} text-White text-2xl lg:text-4xl mb-5`}>TICKETS</h1>
