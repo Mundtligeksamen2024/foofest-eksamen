@@ -163,9 +163,6 @@ export default function Header() {
               SCHEDULE
             </Link>
           </li>
-          <div className='pt-32'>
-            <RotateBanner />
-          </div>
         </ul>
         </>
  

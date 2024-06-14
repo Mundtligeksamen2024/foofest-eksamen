@@ -13,9 +13,9 @@ const BowlbyOne = Bowlby_One({
 function TicketForside() {
   return (
     <>
-      <div className="text-center mt-12 p-10 mb-10">
-        <h2 className={`text-White text-4xl md:text-5xl mb-5 ${BowlbyOne.className}`}>TICKETS</h2>
-        <div className='flex flex-col items-center gap-10 p-10 text-White md:flex-row md:justify-center md:gap-20 md:p-15 '>
+      <div className="text-center mb-20">
+        <h2 className={`text-White text-4xl md:text-5xl md:mb-8 ${BowlbyOne.className}`}>TICKETS</h2>
+        <div className='flex flex-col items-center gap-10 p-5 text-White md:flex-row md:justify-center md:gap-20 md:p-15 md:mb-5'>
           <FooTicket />
           <VipTicket />
         </div>
