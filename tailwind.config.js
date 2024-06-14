@@ -13,6 +13,7 @@ module.exports = {
       'Navyblue': '#29029F',
       'Darkblue': '#020067',
       'Black': '#000000b5',
+      'BlackBlack': '#000',
       'Neon': '#39ff14 ',
     },
 

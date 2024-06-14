@@ -34,7 +34,7 @@ export default function Header() {
  
       {/* nav bar */}
  
-      <nav className="sticky top-0 z-50 bg-Black text-White px-4 py-4 2xl:py-5 flex justify-between items-center md:px-10">
+      <nav className="sticky top-0 z-50 bg-BlackBlack text-White px-4 py-4 2xl:py-5 flex justify-between items-center md:px-10">
         <div>
           <Link
             className={`font-bold text-xl sm:text-2xl 2xl:text-xl ${BowlbyOne.className} hover:text-Hotpink`}
@@ -99,7 +99,7 @@ export default function Header() {
       {/* bliver synlig når menuOpen er sat til true */}
       {/* Når menuOpen er true er menuen synlig med translate-x-0. Når mmenuOpen er false bruges translate-x-full og burgermenuen er skjult   */}
  
-      <div className={`fixed inset-0 bg-Black text-White transition-transform transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} z-50 sm:hidden flex flex-col`}>
+      <div className={`fixed inset-0 bg-BlackBlack text-White transition-transform transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} z-50 sm:hidden flex flex-col`}>
         <div className="flex justify-between items-center p-4">
           <div>
             <Link

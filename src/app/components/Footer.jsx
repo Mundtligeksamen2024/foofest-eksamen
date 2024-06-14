@@ -12,7 +12,7 @@ const BowlbyOne = Bowlby_One({
 export default function Footer() {
   return (
     <section className='p-5 md:p-10 bg-Black'>
-      <div className='flex justify-center gap-28'>
+      <div className='grid gap-10 md:grid-cols-3 md:gap-5 xl:flex xl:justify-center xl:gap-28'>
 
          <div className=''>
           <h2 className={`text-White font-bold text-xl xl:text-1xl ${BowlbyOne.className}`}><span className='text-Hotpink'>© </span>FOO FESTIVAL</h2>
