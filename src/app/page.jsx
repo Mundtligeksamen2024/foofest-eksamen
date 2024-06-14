@@ -5,7 +5,7 @@ import { Bowlby_One } from "next/font/google";
 import ForsideCamping from "./components/ForsideCamping";
 import ForsideQnA from "./components/ForsideQnA";
 import RotateBanner from "./components/RotateBanner";
-import Oversigt from "./components/TriangleForside/oversigt";
+
 
 
 
@@ -27,7 +27,6 @@ export default function Home() {
       <LpBanner />
       <div id="artistPoster"></div>
       <ArtistPoster />
-      <Oversigt />
       <ForsideCamping/>
       <ForsideQnA/>
       <RotateBanner/>

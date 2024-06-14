@@ -15,6 +15,8 @@ module.exports = {
       'Black': '#000000b5',
       'BlackBlack': '#000',
       'Neon': '#39ff14 ',
+      'Gray': '#222222',
+      'Transparent': 'transparent',
     },
 
     extend: {

@@ -15,8 +15,10 @@ const BowlbyOne = Bowlby_One({
 function page() {
   return (
     <div>
-      <LineupBanner/>
-      <h1 className={`text-White text-5xl -mt-5 text-center mb-8 md:text-8xl md:-mt-20 md:p-7 ${BowlbyOne.className}`}>LINE UP</h1>
+      <img className='m-auto w-full bg-center' src="/lineup2.jpg" alt="banner" />
+      <div className='flex text-3xl -mt-10 mb-0 justify-center md:text-4xl md:-mt-72 lg:-mt-72 lg:text-8xl'>
+        <h1 className={`text-White md:relative lg:relative xl:relative md:-mt-18 lg:-mt-28 xl:-mt-96 ${BowlbyOne.className}`}>
+          LINE UP</h1></div>
       <Artistcard />
     </div>
   )

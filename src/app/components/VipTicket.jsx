@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function VipTicket() {
   return (
-    <div className='grid gap-4 border-solid border-Hotpink border-2 p-10 w-full md:w-80'>
+    <div className='grid gap-4 border-solid border-Hotpink border-2 p-10 w-full md:w-80 bg-Black'>
       <h2 className='text-3xl text-start font-normal'>
         <span className='text-Hotpink'>VIP </span>
         TICKET

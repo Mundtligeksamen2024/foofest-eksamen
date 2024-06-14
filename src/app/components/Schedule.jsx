@@ -48,11 +48,11 @@ function Schedule({ newArray, days }) {
       ) : (
         <div>
         {/* filter knapper efter ugedage */}
-          <div className="flex justify-center flex-wrap my-8 mb-4 md:mb-8 gap-5 p-2">
+          <div className="flex justify-center flex-wrap my-8 mb-4 md:-mb-8 md:-mt-80 gap-5 p-2">
             {days.map((day) => (
               <button
                 key={day}
-                className={`text-lg font-bold md:text-2xl px-6 md:px-8 py-1 md:py-2 text-White rounded-full border-Hotpink border-2 uppercase transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer focus:text-White mt-3 dark:bg-none dark:hover:bg-Lightpink focus:bg-Hotpink`}
+                className={`text-lg font-bold md:text-2xl px-6 md:px-8 py-1 md:py-2 text-White rounded-full bg-Black border-Hotpink border-2 uppercase transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer focus:text-White mt-3 dark:bg-none dark:hover:bg-Hotpink focus:bg-Hotpink`}
                 onClick={() => filterActsByDay(day)}
               >
                 {day}

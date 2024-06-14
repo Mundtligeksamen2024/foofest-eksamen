@@ -1,7 +1,6 @@
 import React from "react";
 import Schedule from "@/app/components/Schedule";
 import { Bowlby_One } from "next/font/google";
-import ScheduleBanner from '../components/ScheduleBanner';
 
 
 const BowlbyOne = Bowlby_One({
@@ -48,10 +47,11 @@ async function SchedulePage() {
     <>
       <main>
         <div>
-          <ScheduleBanner />
-          <h1 className={`text-White text-5xl -mt-5 text-center mb-8 md:text-8xl md:-mt-20 md:p-7 ${BowlbyOne.className}`}>SCHEDULE</h1>
-          <Schedule newArray={merged} days={days}/>
+        <img className='m-auto w-full bg-center' src="/schedule-hero2.jpg" alt="banner" />
+        <div className="flex text-3xl -mt-10 mb-0 justify-center md:md-28 lg:mb-28 md:text-4xl md:-mt-72 lg:-mt-72 lg:text-8xl">
+          <h1 className={`text-White md:mb-96 xl:-mb-28 lg:-mt-28 xl:-mt-96 ${BowlbyOne.className}`}>SCHEDULE</h1></div>
         </div>
+        <Schedule newArray={merged} days={days}/>
       </main>
     </>
   );

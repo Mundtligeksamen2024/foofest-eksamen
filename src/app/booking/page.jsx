@@ -20,11 +20,12 @@ export default function TicketsPage() {
   return (
     <>
     {/* Booking banner */}
-      <BookingBanner />
-      <div>
+    <img className='m-auto w-full bg-center' src="/booking-hero.jpg" alt="banner" />
+    <div className="flex justify-center">
+      <div className="md:relative md:-mt-18 lg:relative lg:-mt-28 xl:relative xl:-mt-96">
 
         {/* Page title */}
-        <h1 className={`text-White text-5xl -mt-5 text-center mb-8 md:text-8xl md:-mt-20 md:p-7 ${BowlbyOne.className}`}>
+        <h1 className={` text-White text-5xl md:text-8xl lg:text-8xl -mt-5 text-center mb-8 md:-mt-96 lg:-mt-96 ${BowlbyOne.className}`}>
           TICKETS
         </h1>
 
@@ -37,6 +38,7 @@ export default function TicketsPage() {
         {/* Buy ticket button */}
         <div className="flex mb-14">
         <BuyTicket />
+        </div>
         </div>
       </div>
     </>
