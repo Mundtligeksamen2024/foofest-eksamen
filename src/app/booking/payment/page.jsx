@@ -1,8 +1,8 @@
 "use client"
-//credit card information page
+
+import { useState } from 'react'
 // import { Breadcrumb } from 'antd';
 import CardPayment from '@/app/components/CardPayment'
-import { useState } from 'react'
 import CountdownTimer from "@/app/components/Countdown/timer";
 
 const items = [
@@ -14,14 +14,13 @@ const items = [
   { label: 'Order Confirmation', path: '/booking/orderConfirmation' }
 ];
 
-const [isTimeUp, setIsTimeUp] = useState(false);
+export default function Page() {
+  const [isTimeUp, setIsTimeUp] = useState(false);
 
 const handleTimeout = () => {
   setIsTimeUp(true);
 };
 
-
-export default function Page() {
   return (
     <div>
       {/* <div>
