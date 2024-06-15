@@ -20,7 +20,9 @@ const CountdownTimer = ({ initialSeconds }) => {
             clearInterval(interval);
             handleTimeout();
           }
-          return newSeconds >= 0 ? newSeconds : 0; // Ensure seconds never go below 0
+
+          // Ensure seconds never go below 0
+          return newSeconds >= 0 ? newSeconds : 0; 
         });
       }, 1000);
       return () => clearInterval(interval);
@@ -62,7 +64,7 @@ const CountdownTimer = ({ initialSeconds }) => {
       )}
 
       <Modal
-        title="Time's Up!"
+        title="Times Up!"
         visible={showModal}
         footer={[
           <Link key="back-to-booking" href="/booking" onClick={handleLinkClick} passHref>
