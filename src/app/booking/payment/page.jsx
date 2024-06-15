@@ -14,15 +14,14 @@ const items = [
   { label: 'Order Confirmation', path: '/booking/orderConfirmation' }
 ];
 
+const [isTimeUp, setIsTimeUp] = useState(false);
+
+const handleTimeout = () => {
+  setIsTimeUp(true);
+};
 
 
 export default function page() {
-  const [isTimeUp, setIsTimeUp] = useState(false);
-
-  const handleTimeout = () => {
-    setIsTimeUp(true);
-  };
-
   return (
     <div>
       {/* <div>
