@@ -10,8 +10,8 @@ export default function Ticket(props) {
 
 
   return (
-    <div className='grid gap-4 border-solid border-Hotpink border-2 p-8 text-White w-72'>
-    <h2 className='text-White text-4xl font-bold'>ITEMS</h2> 
+    <div className='grid gap-4 border-solid border-Hotpink border-2 p-7 text-White w-72 md:mb-3'>
+    <h2 className='text-White md:text-2xl lg:text-4xl font-bold'>ITEMS</h2> 
     
     <ParentComponent 
      ticketCount={props.ticketcount1} 
