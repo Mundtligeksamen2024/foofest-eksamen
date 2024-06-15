@@ -25,7 +25,7 @@ const items = [
 ];
 
 
-function page() {
+export default function Page() {
   const [isTimeUp, setIsTimeUp] = useState(false);
 
   const handleTimeout = () => {
@@ -55,4 +55,3 @@ function page() {
   )
 }
 
-export default page

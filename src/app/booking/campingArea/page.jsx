@@ -2,12 +2,13 @@
 import { useState } from "react";
 import { Bowlby_One } from "next/font/google";
 import { useSearchParams } from "next/navigation";
+import { Breadcrumb } from "antd";
 
 import CampingTickets from "@/app/components/Tickets/CampingTickets";
 import RemoveTent from "@/app/components/Buttons/RemoveTent";
 import AddTent from "@/app/components/Buttons/AddTent";
 import ChooseTicket from "@/app/components/ChooseTicket";
-import { Breadcrumb } from "antd";
+
 
 const BowlbyOne = Bowlby_One({
   subsets: ["latin"],

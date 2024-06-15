@@ -21,7 +21,7 @@ const handleTimeout = () => {
 };
 
 
-export default function page() {
+export default function Page() {
   return (
     <div>
       {/* <div>
