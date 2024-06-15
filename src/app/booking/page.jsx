@@ -5,7 +5,6 @@ import { Bowlby_One } from "next/font/google";
 import React from 'react';
 import FooTicket from '../components/FooTicket';
 import VipTicket from '../components/VipTicket';
-import BookingBanner from '../components/BookingBanner';
 import BuyTicket from "../components/BuyTicket";
 
 // set up font

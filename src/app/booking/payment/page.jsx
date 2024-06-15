@@ -2,7 +2,7 @@
 //credit card information page
 // import { Breadcrumb } from 'antd';
 import CardPayment from '@/app/components/CardPayment'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import CountdownTimer from "@/app/components/Countdown/timer";
 
 const items = [
