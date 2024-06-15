@@ -30,12 +30,12 @@ export default function Formpage() {
   };
 
   return (
-    <main>
-      <div >
+    <main className="md:flex md:justify-center">
+      <div>
         <Breadcrumb items={items} />
       </div>
-      <div className="text-White p-4 sm:p-6 md:p-12 lg:px-16 m-4 sm:m-4 md:m-12 lg:mx-44 border-2 xl:mt-22 xl:mb-22 border-Hotpink">
-      <div className="xl:text-2xl text-center p-3 xl:-mt-12 xl:mb-5 border-black border-b-hotpink">
+      <div className="text-White p-4 sm:p-6 md:p-8 m-4 sm:m-4 border-2 xl:mt-22 xl:mb-20 border-Hotpink">
+      <div className="xl:text-2xl text-center p-3 xl:-mt-12 xl:mb-5 border-black border-b-hotpink md:hidden">
           <CountdownTimer initialSeconds={180} onTimeout={handleTimeout} />
       </div>
 
@@ -44,9 +44,9 @@ export default function Formpage() {
         </h1>
 
         {/* ordre er skjult på desktop men vist på mobil */}
-        <details className="md:hidden">
+        <details className="md:hidden border-2 border-Hotpink p-3 w-96 mb-5">
               <summary className="mb-5">
-                <span>Oversigt over ordre</span>
+                <span className="text-2xl">Oversigt over ordre</span>
               </summary>
           <div className="w-full md:flex">
             <div className="w-full max-w-md mb-6">
@@ -61,14 +61,19 @@ export default function Formpage() {
               <GuestForm />
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Ordre bliver skjult på mobil men vist på de andre */}
-          <div className="hidden md:hidden-none w-full md:flex">
-            <div className="w-full max-w-md mb-6">
+      {/* Ordre bliver skjult på mobil men vist på de andre */}
+      <div className="grid gap-5 mt-4">
+      <div className="text-White border-2 p-3 border-Hotpink xl:text-2xl hidden md:block">
+          <CountdownTimer initialSeconds={180} onTimeout={handleTimeout} />
+      </div>
+      <div className="hidden md:hidden-none md:flex border-2 border-Hotpink md:mb-20">
+            <div className="">
               <InformationBasket />
             </div>
-          </div>
-        </div>
+      </div>
       </div>
     </main>
   );

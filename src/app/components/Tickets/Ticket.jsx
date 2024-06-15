@@ -10,7 +10,7 @@ export default function Ticket(props) {
 
 
   return (
-    <div className='grid gap-4 border-solid border-Hotpink border-2 p-7 text-White w-72 md:mb-3'>
+    <div className='grid gap-4 border-solid border-Hotpink border-2 p-7 text-White w-72'>
     <h2 className='text-White md:text-2xl lg:text-4xl font-bold'>ITEMS</h2> 
     
     <ParentComponent 
@@ -28,7 +28,6 @@ export default function Ticket(props) {
     <hr className='text-Hotpink border-t-2'/>
 
     <h2 className='text-xl'>{ticketCount} TICKETS  {TotalTicketCount} DKK</h2>
-    
     <h2 className='text-xl'><span className='text-Hotpink font-bold'>TOTAL </span>  {totalPrice} DKK </h2>
     </div>
   );

@@ -76,7 +76,7 @@ export default function Home() {
           </div>
     </div>
 
-    <div className="w-11/12 p-8 m-auto border-solid border-Hotpink border-2 sm:mb-10">
+    <div className="w-11/12 m-auto p-8 border-solid border-Hotpink border-2 sm:mb-10 lg:w-9/12 xl:h-96 xl:mb-28">
       <h1 className={` ${BowlbyOne.className} text-White text-2xl lg:text-4xl mb-5`}>TICKETS</h1>
         <div className="grid gap-28">
     
@@ -118,6 +118,7 @@ export default function Home() {
     </div>
     
     {/* Vis kun på desktop */}
+    <div className=''>
     <div className='hidden md:block'>
           <div>
             <Ticket 
@@ -130,9 +131,10 @@ export default function Home() {
              handleRemoveTicket2={handleRemoveTicket2} 
              ticketPrice2={1299} />
           </div>
-          <div className='m-auto'>
+    </div>
+    <div className='flex m-auto md:mt-3'>
             <ChooseTicket />
-          </div>
+    </div>
     </div>
     </section>
     </form>

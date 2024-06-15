@@ -8,6 +8,8 @@ import CampingTickets from "@/app/components/Tickets/CampingTickets";
 import RemoveTent from "@/app/components/Buttons/RemoveTent";
 import AddTent from "@/app/components/Buttons/AddTent";
 import ChooseTicket from "@/app/components/ChooseTicket";
+import ItemCamping from "@/app/components/Item-Mobil/ItemCamping";
+
 
 
 const BowlbyOne = Bowlby_One({
@@ -85,13 +87,31 @@ const TentOptions = ({
   );
 };
 
+const TicketMobilSummary = ({
+  twoTentTicket,
+  threeTentTicket,
+  campingArea,
+}) => (
+  <div className="grid">
+    <div className="">
+      <ItemCamping
+        tentTicket={twoTentTicket}
+        tentPrice={299}
+        threeTentTicket={threeTentTicket}
+        threeTentPrice={399}
+        campingArea={campingArea}
+      />
+    </div>
+  </div>
+);
+
 const TicketSummary = ({
   twoTentTicket,
   threeTentTicket,
   campingArea,
 }) => (
-  <div className="grid gap-5">
-    <div className="xl:mr-44">
+  <div className="grid">
+    <div className="">
       <CampingTickets
         tentTicket={twoTentTicket}
         tentPrice={299}
@@ -100,7 +120,6 @@ const TicketSummary = ({
         campingArea={campingArea}
       />
     </div>
-    <ChooseTicket />
   </div>
 );
 
@@ -123,10 +142,21 @@ export default function Home() {
         <Breadcrumb items={items} />
       </div>
       <form action="/booking/guestInformation">
+
+      {/* Bliver kun vist på mobil */}
+        <div className="m-auto lg:hidden">
+          <TicketMobilSummary
+              twoTentTicket={twoTentTicket}
+              threeTentTicket={threeTentTicket}
+              campingArea={campingArea}
+            />
+        </div>
+
         <input type="hidden" name="ticketcount1" value={regular} />
         <input type="hidden" name="ticketcount2" value={vip} />
-
-        <div className="w-11/12 p-3 border-solid border-Hotpink border-2 xl:px-20 xl:py-8 lg:w-9/12 m-auto mt-28 xl:mb-28">
+        
+        <div className="lg:flex lg:gap-5 lg:px-72 lg:justify-center">
+        <div className="m-auto w-11/12 p-3 border-solid border-Hotpink border-2 xl:px-12 xl:py-8 mt-10 xl:mb-28">
           <h1 className={`text-White text-2xl mb-10 md:mb-0 lg:text-4xl ${BowlbyOne.className}`}>
             CAMPING AREA
           </h1>
@@ -152,14 +182,23 @@ export default function Home() {
                 label="3"
                 price="399"
               />
-              <br />
             </div>
-            <TicketSummary
+          </div>
+        </div>
+
+        {/* Bliver kun vist på desktop */}
+        <div className="grid mt-10">
+        <div className="hidden lg:block">
+          <TicketSummary
               twoTentTicket={twoTentTicket}
               threeTentTicket={threeTentTicket}
               campingArea={campingArea}
             />
-          </div>
+        </div>
+        <div className='flex m-auto mt-5 md:mt-3 lg:-mt-6'>
+            <ChooseTicket />
+        </div>
+        </div>
         </div>
       </form>
     </>

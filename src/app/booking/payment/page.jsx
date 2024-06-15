@@ -26,7 +26,7 @@ const handleTimeout = () => {
       {/* <div>
         <Breadcrumb items={items} />
       </div> */}
-      <div className="text-White xl:text-2xl text-center p-3 xl:mt-10 xl:mb-5">
+      <div className="text-White xl:text-2xl text-center p-3 xl:mt-10 xl:mb-5 border-2 border-Hotpink lg:w-3/6 lg:m-auto">
           <CountdownTimer initialSeconds={180} onTimeout={handleTimeout} />
       </div>
       <CardPayment/>
