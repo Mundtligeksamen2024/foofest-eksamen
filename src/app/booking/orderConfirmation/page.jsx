@@ -1,10 +1,13 @@
 "use client"
-// order conformation - tak for dit køb
-import Link from "next/link"
+
+import { useState } from "react";
 import { Bowlby_One } from "next/font/google";
 import { Breadcrumb } from "antd";
+
+
+import Link from "next/link"
 import CountdownTimer from "@/app/components/Countdown/timer";
-import { useState } from "react";
+
 
 
 const BowlbyOne = Bowlby_One({
