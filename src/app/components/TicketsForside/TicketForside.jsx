@@ -2,7 +2,6 @@ import React from 'react'
 import FooTicket from '../FooTicket'
 import VipTicket from '../VipTicket'
 import { Bowlby_One } from "next/font/google";
-import BuyTicket from '../BuyTicket';
 
 const BowlbyOne = Bowlby_One({
     subsets: ["latin"],
@@ -19,7 +18,6 @@ function TicketForside() {
           <FooTicket />
           <VipTicket />
         </div>
-        <BuyTicket />
       </div>
     </>
   )

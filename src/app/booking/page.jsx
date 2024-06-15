@@ -34,10 +34,10 @@ export default function TicketsPage() {
           <VipTicket />
         </div>
 
-        {/* Buy ticket button */}
+        {/* Buy ticket button
         <div className="flex mb-14">
         <BuyTicket />
-        </div>
+        </div> */}
         </div>
       </div>
     </>
