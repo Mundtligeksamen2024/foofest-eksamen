@@ -60,16 +60,16 @@ const CountdownTimer = ({ initialSeconds }) => {
       {countdownActive ? (
         <p>Time remaining: {formatTime(seconds)}</p>
       ) : (
-        <p>Time's up!</p>
+        <p>Time&apos;s up!</p>
       )}
 
       <Modal
-        title="Times Up!"
+        title="Time's Up!"
         visible={showModal}
         footer={[
           <Link key="back-to-booking" href="/booking" onClick={handleLinkClick} passHref>
             Go back to Booking
-          </Link>,
+          </Link>
         ]}
         onCancel={handleCloseModal}
       >
