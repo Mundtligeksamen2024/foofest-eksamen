@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import { Bowlby_One } from "next/font/google";
-import { useRouter } from 'next/navigation';
-// import { Breadcrumb } from 'antd';
+
 
 import Ticket from "@/app/components/Tickets/Ticket";
 import RemoveTicket from '@/app/components/RemoveTicket';
@@ -12,14 +11,6 @@ import ChooseTicket from '@/app/components/ChooseTicket';
 import ItemMobil from '@/app/components/Item-Mobil/ItemMobil';
 
 
-// // breadcrunb path
-// const items = [
-//   { label: 'Home', path: '/' },
-//   { label: 'Tickets', path: '/booking/ticketoverview' }
-// ];
-
-
-// font setup
 const BowlbyOne = Bowlby_One({
   subsets: ["latin"],
   weight: "400",
@@ -51,13 +42,9 @@ export default function Home() {
     }
   };
 
-  const router = useRouter();
   
   return (
     <>
-    {/* <div >
-      <Breadcrumb items={items} className='' />
-    </div> */}
     <form action='/booking/campingArea'>
     <section className='grid gap-5 md:flex md:justify-center md:w-4/6 md:m-auto md:mt-10 lg:mt-10 lg:m-auto lg:w-4/6'>
 

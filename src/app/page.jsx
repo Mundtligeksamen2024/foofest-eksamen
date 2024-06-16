@@ -1,13 +1,10 @@
-// forside, landingpage
+
 import ArtistPoster from "./components/ArtistPoster";
 import LpBanner from "./components/LpBanner";
 import { Bowlby_One } from "next/font/google";
 import ForsideCamping from "./components/ForsideCamping";
 import ForsideQnA from "./components/ForsideQnA";
 import RotateBanner from "./components/RotateBanner";
-
-
-
 
 const BowlbyOne = Bowlby_One({
   subsets: ["latin"],

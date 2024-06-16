@@ -6,17 +6,12 @@ import React from 'react';
 import FooTicket from '../components/FooTicket';
 import VipTicket from '../components/VipTicket';
 
-
-
 // set up font
 const BowlbyOne = Bowlby_One({
   subsets: ["latin"],
   weight: "400",
   display: "swap",
 });
-
-
-
 
 // main ticket component 
 export default function TicketsPage() {
