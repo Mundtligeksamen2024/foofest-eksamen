@@ -1,20 +1,38 @@
 import React, { useState, useEffect } from 'react';
+import { Bowlby_One } from 'next/font/google';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { Bowlby_One } from 'next/font/google';
 import Loader from './Loader';
 
+
+
+
+
+// font
 const BowlbyOne = Bowlby_One({
   subsets: ['latin'],
   weight: '400',
   display: 'swap',
 });
 
+
+
+
+// Lineup funktion
 export default function LineUp() {
+  // array med banddata de er hentet fra API
   const [bands, setBands] = useState(null);
+
+  // Angiver om data hentes med true
   const [loading, setLoading] = useState(true);
+
+  // Angiver den akutelle valgte genre fra en dropdown
   const [selectedGenre, setSelectedGenre] = useState('All');
 
+
+  // hentning af banddata ved brug af useEffect 
+  // på linje 45 betyder at den kun køres en gang pga []
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,7 +47,12 @@ export default function LineUp() {
     };
 
     fetchData();
-  }, []);
+  }, []); 
+
+
+
+
+
 
   // Hvis loading er sand, vis loader-komponenten
   if (loading) return <Loader />;
@@ -37,25 +60,47 @@ export default function LineUp() {
   // Hvis bands ikke er tilgængelige, vis besked om ingen bands data
   if (!bands) return <p>No bands data</p>;
 
+
+
+
+
+  // håndtering af genrevalg
+  // opdaterer tilstanden baseret på dropdown-valg
   const handleGenreChange = (event) => {
     setSelectedGenre(event.target.value);
   };
 
-  // Filtrering af bands efter valgt genre
+
+
+
+  // Denne linje bestemmer, hvilke bands der skal vises baseret på den valgte genre (selectedGenre)
   const filteredBands = selectedGenre === 'All' ? bands : bands.filter((band) => band.genre === selectedGenre);
+  // ? : tjekker om selectedGenre er lig med All
+  // bands.filter((band) => band.genre === selectedGenre) - Når selectedGenre ikke er 'All', filtrerer dette bands til kun at inkludere de bands, hvor band.genre matcher selectedGenre
+  // Opretter et nyt array (filteredBands), der kun indeholder bands af den valgte genre
+
+
+
 
   // Gruppering af bands efter genre
-  const groupedByGenre = bands.reduce((acc, band) => {
-    if (!acc[band.genre]) {
-      acc[band.genre] = [];
+  const groupedByGenre = bands.reduce((acc, band) => { // reduce gennemgår hvert element (band) i bands-arrayet.  
+    if (!acc[band.genre]) { 
+      acc[band.genre] = []; // Initialiserer et tomt array for hver unikke genre, der findes i bands
     }
-    acc[band.genre].push(band);
-    return acc;
+    acc[band.genre].push(band); // Tilføjer det aktuelle band-objekt til arrayet, der svarer til dets genre
+    return acc; // Returnerer acc-objektet efter hver iteration, som alle bands grupperet efter deres respektive genrer
   }, {});
 
-  // Sortering af genrer
+
+
+  // Sorter genrerne alfabetisk baseret på groupedByGenre-objektet
+  // Object.keys(groupedByGenre): Henter en array af alle (genrer) fra groupedByGenre-objektet
+  // Bruger sort-metoden til at sortere arrayet af genrer alfabetisk
+  // a.localeCompare(b) sikrer, at sorteringen sker i henhold til lokaliseret rækkefølge, hvilket er nyttigt for håndtering af forskellige tegnsæt og sprog.
   const sortedGenres = Object.keys(groupedByGenre).sort((a, b) => a.localeCompare(b));
 
+
+// Komponenten renderes med dens indhold, baseret på tilstanden og data (filteredBands, groupedByGenre, sortedGenres).
   return (
     <section className='p-10'>
       {/* Dropdown for valg af genre */}
@@ -66,9 +111,11 @@ export default function LineUp() {
             id="genre"
             name="genre"
             className="bg-BlackBlack md:p-10 md:py-0 text-White xl:text-4xl"
-            onChange={handleGenreChange}
+            onChange={handleGenreChange} // opdaterer selectedGenre
             value={selectedGenre}
           >
+
+            {/* sorteret alfabetisk */}
             <option className='text-center' value="All">All genres</option>
             {sortedGenres.map((genre) => (
               <option key={genre} value={genre}>{genre}</option>
@@ -77,8 +124,10 @@ export default function LineUp() {
         </div>
       </div>
 
+
+
       {/* Bands for the selected genre */}
-      {selectedGenre !== 'All' && filteredBands.length > 0 && (
+      {selectedGenre !== 'All' && filteredBands.length > 0 && ( 
         <div className="mb-10">
 
           <h2 className="text-White text-2xl sm:text-4xl xl:text-4xl font-semibold">{selectedGenre}</h2>
@@ -108,6 +157,9 @@ export default function LineUp() {
           </div>
         </div>
       )}
+
+
+
 
       {/* Bands grouped by all genres */}
       {sortedGenres.map((genre) => (

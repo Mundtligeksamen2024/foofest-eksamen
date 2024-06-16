@@ -5,7 +5,6 @@ import { Bowlby_One } from "next/font/google";
 import React from 'react';
 import FooTicket from '../components/FooTicket';
 import VipTicket from '../components/VipTicket';
-import BuyTicket from "../components/BuyTicket";
 
 // set up font
 const BowlbyOne = Bowlby_One({
@@ -33,11 +32,6 @@ export default function TicketsPage() {
           <FooTicket />
           <VipTicket />
         </div>
-
-        {/* Buy ticket button
-        <div className="flex mb-14">
-        <BuyTicket />
-        </div> */}
         </div>
       </div>
     </>

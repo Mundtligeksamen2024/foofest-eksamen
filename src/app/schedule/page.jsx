@@ -3,17 +3,22 @@ import Schedule from "@/app/components/Schedule";
 import { Bowlby_One } from "next/font/google";
 
 
+// font
 const BowlbyOne = Bowlby_One({
   subsets: ["latin"],
   weight: "400",
   display: "swap",
 });
 
+
+// meta tag
 export const metadata = {
   title: "Foo Fest | Schedule",
   Description: "Check out the complete schedule for FOO Festival 2024 and plan your ultimate festival experience!",
 };
 
+
+// funktion
 async function SchedulePage() {
   // Merger to links sammen. Bands og schedule
   const bands = await fetch(
@@ -23,8 +28,13 @@ async function SchedulePage() {
     "https://yielding-cooperative-tarsal.glitch.me/schedule"
   ).then((r) => r.json());
 
+
+
   const scenes = ["Midgard", "Jotunheim", "Vanaheim"];
   const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+
+
 
   const merged = bands.map((band) => {
     const newBand = { ...band };

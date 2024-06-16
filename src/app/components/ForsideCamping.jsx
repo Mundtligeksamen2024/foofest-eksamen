@@ -19,7 +19,7 @@ function ForsideCamping() {
             <img src="/card5.webp" alt="dummy" className="w-full h-72 object-cover" />
             <div className="p-5">
               <h3 className="text-2xl font-bold mb-4 text-White uppercase">Friday and Saturday are sold out!</h3>
-              <p className="text-lg">All single-day tickets for Friday and Saturday at FOO FESTIVAL 2024 are gone. We expect a fully sold-out festival, so buy your ticket in time.</p>
+              <p className="text-lg">All single-day tickets for Friday and Saturday at FOO FESTIVAL 2024 are sold out. We expect a fully sold-out festival, so buy your ticket in time.</p>
             </div>
           </div>
 
