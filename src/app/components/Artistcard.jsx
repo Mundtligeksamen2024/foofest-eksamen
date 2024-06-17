@@ -184,7 +184,7 @@ export default function LineUp() {
 
 
 //   // hentning af banddata ved brug af useEffect 
-//   // på linje 45 betyder at den kun køres en gang pga []
+//   // Betyder at den kun køres en gang pga []
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {

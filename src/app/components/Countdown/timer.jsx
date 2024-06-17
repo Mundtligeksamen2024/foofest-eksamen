@@ -35,8 +35,6 @@ const CountdownTimer = ({ initialSeconds }) => {
 
 
 
-
-
   const handleTimeout = () => {
     setShowModal(true); 
     setSeconds(0); 
@@ -118,7 +116,7 @@ export default CountdownTimer;
 //     // SessionStorage, gemmer den aktuelle tid, hvis man opdaterer siden så vil nedtællingen forsætte
 //     const storedSeconds = parseInt(sessionStorage.getItem('countdownSeconds')) || initialSeconds;
 
-//     // opdaterer tilstandvariablen seconds med de hentede sekunder 
+//     // opdaterer tilstandvariablen seconds 
 //     setSeconds(storedSeconds);
 
 //     // starter nedtællingen 
@@ -126,22 +124,20 @@ export default CountdownTimer;
 //     if (storedSeconds > 0) {
 //       const interval = setInterval(() => {
 
-//         // setSeconds bruger en funktion til at opdaterer en aktuelle seconds tilstand
-//         // prevSeconds repræsenterer den forrige tilstandsværdi
+//         // setSeconds opdaterer den aktuelle seconds tilstand
+//         // prevSeconds viser den forrige tilstandsværdi
 //         setSeconds((prevSeconds) => {
 
-//           // newSeconds = prevSeconds - 1 beregner de nye sekunder ved at trække 1 fra de tidligerer sekunder.
+//           // Trække 1 fra de tidligerer sekunder.
 //           const newSeconds = prevSeconds - 1;
 
-//           // sessionStorage.setItem('countdownSeconds', newSeconds) gemmer de nye sekunder i sessionStorage 
+//           // Gemmer de nye sekunder i sessionStorage 
 //           sessionStorage.setItem('countdownSeconds', newSeconds);
 
-//           // håndtering af timeout
 //           // hvis newSeconds er mindre end eller lig med 0 stoppes intervallet med clearInterval(interval)
 //           if (newSeconds <= 0) {
 //             clearInterval(interval);
 
-//             // dette kaldes på en timeout-tilstand 
 //             handleTimeout();
 //           }
 
@@ -152,10 +148,10 @@ export default CountdownTimer;
 //         // intervallet kører hvert sekund "1000 millisekunder" 
 //       }, 1000);
 
-//       // Oprydningsfunktion, der sikre at intervallet stoppes korrekt for at forhindre negative tal
+//       // Forhindre negative tal
 //       return () => clearInterval(interval);
 
-//       // hvis storage er 0 eller mindre kaldes handleTimeout() for at håndterer timeout-tilstanden
+//       // hvis storage er 0 eller mindre kaldes handleTimeout() 
 //     } else {
 //       handleTimeout();
 //     }
@@ -163,18 +159,15 @@ export default CountdownTimer;
 
 
 
-
-
-//   // handleTimeout funktion
 //   const handleTimeout = () => {
 
-//     // viser showModal ved at sætte den til true
+//     // viser pop op  
 //     setShowModal(true); 
 
-//     // sikre at sekunder-tilstanden sættes til 0 når timeout opstår
+//     // Sættes til 0 når timeout opstår
 //     setSeconds(0); 
 
-//     // indikerer at nedtællingen ikke længerer er aktiv / slut
+//     // Nedtællingen er slut
 //     setCountdownActive(false); 
 
 //     // Fjerner countdownSeconds fra sessionStorage for at rydde den gemte nedtællingsværdi
@@ -184,41 +177,36 @@ export default CountdownTimer;
 
 
 
-//   // Skjuler modalvinduet ved at opdatere showModal tilstanden til false
+//   // Skjuler pop op 
 //   const handleCloseModal = () => {
 //     setShowModal(false);
 //   };
 
 
 
-
-//   // handleLinkClick funktion
 //   const handleLinkClick = () => {
 
-//     // Fjerner countdownSeconds fra sessionStorage for at rydde den gemte nedtællingsværdi
+//     // Fjerner countdownSeconds fra sessionStorage 
 //     sessionStorage.removeItem('countdownSeconds'); 
 
-//     // Nulstiller seconds til initialSeconds for at starte nedtællingen fra begyndelsen
+//     // Starter nedtællingen fra begyndelsen
 //     setSeconds(initialSeconds); 
 
-//     // Skjuler modalvinduet ved at opdatere showModal tilstanden til false
+//     // Skjuler pop op 
 //     setShowModal(false);
 
-//     // Genaktiverer nedtællingen ved at sætte countdownActive til true
+//     // Genaktiverer nedtællingen 
 //     setCountdownActive(true); 
 //   };
 
 
 
-
-
-//   // formatTime funktion
 //   const formatTime = (seconds) => {
 
-//     // minutes beregner hele minutter til sekunder
+//     // Beregner hele minutter til sekunder
 //     const minutes = Math.floor(seconds / 60);
 
-//     // Beregner resterende sekunder ved tage % af 60
+//     // Beregner resterende sekunder 
 //     const remainingSeconds = seconds % 60;
 
 //     // formaterer tiden som mm:ss og tilføjer et 0 til sekunder hvis de er mindre end 10 for at sikre to cifre
