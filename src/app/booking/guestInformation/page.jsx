@@ -46,7 +46,7 @@ export default function Formpage() {
         {/* ordre er skjult på desktop men vist på mobil */}
         <details className="md:hidden border-2 border-Hotpink p-3 w-80 mb-5">
               <summary className="mb-5">
-                <span className="text-2xl">Oversigt over ordre</span>
+                <span className="text-2xl">Ordre summary</span>
               </summary>
           <div className="w-full md:flex">
             <div className="w-full max-w-md mb-6">
